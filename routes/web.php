@@ -13,3 +13,6 @@
 
 
 Route::get('/', 'BookController@index')->name('book.index');
+
+Route::get('/create', 'BookController@createIndex')->name('book.create.index');
+Route::post('/create', 'BookController@create')->name('book.create');

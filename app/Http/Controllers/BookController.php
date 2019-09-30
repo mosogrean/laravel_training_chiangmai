@@ -15,4 +15,25 @@ class BookController extends Controller
             compact('books')
         );
     }
+
+    public function createIndex()
+    {
+        return view('book.create');
+    }
+
+    public function create(Request $request)
+    {
+        $book = new Book();
+        $book->name = $request->name;
+        $book->author = $request->author;
+        $book->price = $request->price;
+        $book->describe = $request->describe;
+        $book->pic = $request->pic;
+        $book->type = $request->type;
+
+        if (!$book->save()) {
+            return redirect()->route('book.create.index');
+        }
+        return redirect()->route('book.index');
+    }
 }

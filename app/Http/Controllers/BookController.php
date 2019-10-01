@@ -36,4 +36,39 @@ class BookController extends Controller
         }
         return redirect()->route('book.index');
     }
+
+//    public function editIndex($id)
+//    {
+//        $book = Book::find($id);
+//        return view('book.edit', compact('book'));
+//    }
+
+    public function editIndex(Book $id)
+    {
+        return view('book.edit', ['book' => $id]);
+    }
+
+    public function edit(Request $request)
+    {
+        $book = Book::find($request->id);
+        $book->name = $request->name;
+        $book->author = $request->author;
+        $book->price = $request->price;
+        $book->describe = $request->describe;
+        $book->pic = $request->pic;
+        $book->type = $request->type;
+
+        $book->save();
+        return redirect()->route('book.index');
+    }
+
+    public function delete(Book $id)
+    {
+        $id->delete();
+        return redirect()->route('book.index');
+    }
+
+
+
+
 }

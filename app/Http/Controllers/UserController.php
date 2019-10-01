@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
@@ -21,8 +22,11 @@ class UserController extends Controller
             'password' => 'required|min:6|confirmed'
         ]);
 
-//        $user = User::where('email', $request->email)->get();
-//        dd($user);
+        if (User::where('email', $request->email)->exists()){
+            return redirect()
+                ->route('user.regis.page')
+                ->with(['error' => '๊User is already exist!']);
+        }
 
         $validatedData['password'] = Hash::make($validatedData['password']);
 

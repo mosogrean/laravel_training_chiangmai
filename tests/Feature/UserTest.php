@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\User;
+use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -47,5 +48,24 @@ class UserTest extends TestCase
             'password_confirmation' => 'password',
         ])->assertRedirect(route('user.regis.page'));
     }
+
+    public function testUserCanLogin()
+    {
+        $user = factory(User::class)->create();
+
+        $this->get(route('user.login.page'))
+            ->assertViewIs('user.login')
+            ->assertStatus(200);
+
+        $this->post(route('user.login'), [
+            '_token' => \Session::token(),
+            'email' => $user->email,
+            'password' => 'password',
+        ])->assertSuccessful();
+
+        $this->assertNotEmpty(Auth::user());
+    }
+
+
 
 }

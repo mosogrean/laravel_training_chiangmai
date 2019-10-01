@@ -97,6 +97,17 @@ class BookTest extends TestCase
         $this->assertEquals($bookEdit->pic, $bookEdited->pic);
         $this->assertEquals($bookEdit->type, $bookEdited->type);
     }
+
+    public function testGuestCanDeleteBook()
+    {
+        $book = factory(Book::class)->create();
+
+        $this->get(route('book.delete', $book->id))
+            ->assertRedirect(route('book.index'));
+
+        $bookDelete = Book::find($book->id);
+        $this->assertEmpty($bookDelete);
+    }
 }
 
 

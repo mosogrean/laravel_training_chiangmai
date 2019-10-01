@@ -21,3 +21,10 @@ Route::get('/edit/{id}', 'BookController@editIndex')->name('book.edit.index');
 Route::post('/edit', 'BookController@edit')->name('book.edit');
 
 Route::get('/delete/{id}', 'BookController@delete')->name('book.delete');
+
+Route::name('user.')->group(function () {
+    Route::get('/register', 'UserController@regisPage')->name('regis.page');
+    Route::post('/register', 'UserController@regis')->name('regis');
+
+    Route::get('/login', 'UserController@loginPage')->name('login.page');
+});

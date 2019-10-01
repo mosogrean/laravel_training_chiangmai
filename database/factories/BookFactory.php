@@ -10,9 +10,9 @@ $factory->define(\App\Book::class, function (Faker $faker) {
         'author' => $faker->name,
         'price' => $faker->numberBetween(100, 1000),
         'describe' => $faker->text,
-        'pic' => $faker->url,
         'type' => $faker->randomElement([
-           'สารคดี', 'บันเทิง', 'develop', 'นิตยสาร',
+        'pic' => $faker->url,
+        'สารคดี', 'บันเทิง', 'develop', 'นิตยสาร',
         ]),
     ];
 });

@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f578f62c-6070-4d1d-b8cf-706e25a432a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/BookFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/BookFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/book/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/book/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/book/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/book/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/book/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/book/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/regis.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/regis.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/UserTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,15 +22,6 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/book/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="81" column="36" lean-forward="true" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/book/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="254">
@@ -48,17 +36,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+            <state relative-caret-position="530">
+              <caret line="29" column="47" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="24" selection-end-column="20" />
+            <state relative-caret-position="-308">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="e#40#53#0#PHP" expanded="true" />
               </folding>
@@ -67,19 +55,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/user/regis.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="876">
-              <caret line="46" column="119" selection-start-line="46" selection-start-column="111" selection-end-line="46" selection-end-column="119" />
+            <state relative-caret-position="547">
+              <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+              <folding>
+                <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Feature/UserTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="44" column="36" lean-forward="true" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+            <state relative-caret-position="445">
+              <caret line="66" column="44" lean-forward="true" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
               <folding>
                 <element signature="e#33#46#0#PHP" expanded="true" />
               </folding>
@@ -158,11 +140,11 @@
         <option value="$PROJECT_DIR$/resources/views/book/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/BookController.php" />
         <option value="$PROJECT_DIR$/resources/views/book/edit.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/user/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user/regis.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/tests/Feature/UserTest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
       </list>
     </option>
   </component>
@@ -359,13 +341,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.UserTest.testGuestCannotRegisterWhenExist">
+  <component name="RunManager" selected="PHPUnit.UserTest.testUserCanLogin">
     <configuration name="BookTest.testGuestCanDeleteBook" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\BookTest" file="$PROJECT_DIR$/tests/Feature/BookTest.php" method="testGuestCanDeleteBook" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="BookTest.testGuestCanEditBook" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\BookTest" file="$PROJECT_DIR$/tests/Feature/BookTest.php" method="testGuestCanEditBook" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="BookTest.testGuestCanSeeAllBookExist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -380,13 +358,17 @@
       <TestRunner class="Tests\Feature\UserTest" file="$PROJECT_DIR$/tests/Feature/UserTest.php" method="testGuestCannotRegisterWhenExist" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="UserTest.testUserCanLogin" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\UserTest" file="$PROJECT_DIR$/tests/Feature/UserTest.php" method="testUserCanLogin" scope="Method" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.UserTest.testUserCanLogin" />
         <item itemvalue="PHPUnit.UserTest.testGuestCannotRegisterWhenExist" />
         <item itemvalue="PHPUnit.UserTest.testGuestCanRegister" />
         <item itemvalue="PHPUnit.BookTest.testGuestCanSeeAllBookExist" />
         <item itemvalue="PHPUnit.BookTest.testGuestCanDeleteBook" />
-        <item itemvalue="PHPUnit.BookTest.testGuestCanEditBook" />
       </list>
     </recent_temporary>
   </component>
@@ -413,39 +395,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserTest_testGuestCanRegister - 2019.10.01 at 16h 48m 24s.xml">
-      <configuration name="UserTest.testGuestCanRegister" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UserTest_testUserCanLogin - 2019.10.02 at 10h 18m 14s.xml">
+      <configuration name="UserTest.testUserCanLogin" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UserTest_testGuestCanRegister - 2019.10.01 at 16h 49m 00s.xml">
-      <configuration name="UserTest.testGuestCanRegister" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UserTest_testUserCanLogin - 2019.10.02 at 10h 22m 03s.xml">
+      <configuration name="UserTest.testUserCanLogin" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UserTest_testGuestCanRegister - 2019.10.01 at 16h 49m 28s.xml">
-      <configuration name="UserTest.testGuestCanRegister" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UserTest_testUserCanLogin - 2019.10.02 at 10h 31m 10s.xml">
+      <configuration name="UserTest.testUserCanLogin" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UserTest_testGuestCanRegister - 2019.10.01 at 17h 18m 56s.xml">
-      <configuration name="UserTest.testGuestCanRegister" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UserTest_testUserCanLogin - 2019.10.02 at 10h 31m 50s.xml">
+      <configuration name="UserTest.testUserCanLogin" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UserTest_testGuestCanRegister - 2019.10.01 at 17h 21m 07s.xml">
-      <configuration name="UserTest.testGuestCanRegister" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UserTest_testUserCanLogin - 2019.10.02 at 10h 33m 32s.xml">
+      <configuration name="UserTest.testUserCanLogin" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UserTest_testGuestCanRegister - 2019.10.01 at 17h 22m 40s.xml">
-      <configuration name="UserTest.testGuestCanRegister" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UserTest_testUserCanLogin - 2019.10.02 at 10h 35m 28s.xml">
+      <configuration name="UserTest.testUserCanLogin" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UserTest_testGuestCanRegister - 2019.10.01 at 17h 23m 39s.xml">
-      <configuration name="UserTest.testGuestCanRegister" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UserTest_testUserCanLogin - 2019.10.02 at 10h 35m 51s.xml">
+      <configuration name="UserTest.testUserCanLogin" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UserTest_testGuestCanRegister - 2019.10.01 at 17h 25m 43s.xml">
-      <configuration name="UserTest.testGuestCanRegister" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UserTest_testUserCanLogin - 2019.10.02 at 10h 36m 00s.xml">
+      <configuration name="UserTest.testUserCanLogin" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UserTest_testGuestCannotRegisterWhenExist - 2019.10.01 at 17h 26m 22s.xml">
-      <configuration name="UserTest.testGuestCannotRegisterWhenExist" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UserTest_testUserCanLogin - 2019.10.02 at 10h 36m 06s.xml">
+      <configuration name="UserTest.testUserCanLogin" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UserTest_testGuestCannotRegisterWhenExist - 2019.10.01 at 17h 26m 44s.xml">
-      <configuration name="UserTest.testGuestCannotRegisterWhenExist" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UserTest_testUserCanLogin - 2019.10.02 at 10h 37m 02s.xml">
+      <configuration name="UserTest.testUserCanLogin" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29602000" />
+    <option name="totallyTimeSpent" value="34187000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -462,7 +444,7 @@
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.2821577" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.031120332" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32987553" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -470,7 +452,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info active="true" anchor="right" auto_hide="true" x="-148" y="135" width="1680" height="1005" id="Run" order="4" type="SLIDING" visible="true" weight="0.25579977" />
+      <window_info anchor="right" auto_hide="true" x="-148" y="135" width="1680" height="1005" id="Run" internal_type="SLIDING" order="4" type="SLIDING" weight="0.3003663" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,20 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/book/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -632,29 +600,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/user/regis.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="24" selection-end-column="20" />
+        <state relative-caret-position="547">
+          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
           <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/user/regis.blade.php">
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="876">
-          <caret line="46" column="119" selection-start-line="46" selection-start-column="111" selection-end-line="46" selection-end-column="119" />
+        <state relative-caret-position="530">
+          <caret line="29" column="47" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding>
+            <element signature="e#23#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-500">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/UserTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="44" column="36" lean-forward="true" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+        <state relative-caret-position="445">
+          <caret line="66" column="44" lean-forward="true" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
           <folding>
             <element signature="e#33#46#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-308">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="e#40#53#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -27,4 +27,5 @@ Route::name('user.')->group(function () {
     Route::post('/register', 'UserController@regis')->name('regis');
 
     Route::get('/login', 'UserController@loginPage')->name('login.page');
+    Route::post('/login', 'UserController@login')->name('login');
 });

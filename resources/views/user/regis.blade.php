@@ -23,6 +23,13 @@
                 <h1><strong>สมัครสมาชิก</strong></h1>
             </div>
         </div>
+        @if(session('error'))
+            <div class="row">
+                <div class="col-3 offset-3">
+                    <h3 style="color: red">{{ session('error') }}</h3>
+                </div>
+            </div>
+        @endif
         <div class="row justify-content-center">
             <div class="col-6">
                 <form action="{{route('user.regis')}}" method="post">

@@ -28,4 +28,6 @@ Route::name('user.')->group(function () {
 
     Route::get('/login', 'UserController@loginPage')->name('login.page');
     Route::post('/login', 'UserController@login')->name('login');
+
+    Route::get('/logout', 'UserController@logout')->name('logout');
 });

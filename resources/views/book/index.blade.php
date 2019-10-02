@@ -11,7 +11,6 @@
 
     <style>
         body {
-            margin-top: 40px;
             color: white;
             background: #414141;
         }
@@ -23,9 +22,60 @@
             text-decoration: none;
             color: #4dc0b5;
         }
+        .login {
+            font-size: 1.3em;
+        }
+        .login:hover {
+            background-color: #1d643b;
+            border-radius: 1.1em;
+        }
+
+        .regis {
+            font-size: 1.3em;
+        }
+
+        .regis:hover {
+            background-color: #1b5264;
+            border-radius: 1.1em;
+        }
     </style>
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-sm bg-dark">
+
+        <!-- Links -->
+        <div class="container justify-content-end">
+            <div class="row">
+                <div class="col-12" align="right">
+
+                    @if(!empty(\Illuminate\Support\Facades\Auth::user()))
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link login" href="{{ route('user.logout') }}" style="color: white">{{
+                                \Illuminate\Support\Facades\Auth::user()->name
+                                }}</a>
+                            </li>
+                        </ul>
+                    @else
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link login" href="{{ route('user.login.page') }}" style="color: white">เข้าสู่ระบบ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link regis" href="{{ route('user.regis.page') }}" style="color: #a1cbef">สมัครสมาชิก</a>
+                            </li>
+                        </ul>
+                    @endif
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <br><br>
     <div class="container">
         <div class="row">
             <div class="col-3">

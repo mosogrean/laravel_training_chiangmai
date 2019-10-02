@@ -79,4 +79,10 @@ class UserController extends Controller
         return redirect()->route('book.index');
     }
 
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('user.login.page');
+    }
+
 }

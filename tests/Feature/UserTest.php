@@ -10,6 +10,8 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class UserTest extends TestCase
 {
+    use RefreshDatabase;
+
     public function testGuestCanRegister()
     {
         $user = factory(User::class)->make();
@@ -65,6 +67,20 @@ class UserTest extends TestCase
 
         // use Illuminate\Support\Facades\Auth;
         $this->assertNotEmpty(Auth::user());
+    }
+
+    public function testUserCanLogout()
+    {
+        $user = factory(User::class)->create();
+
+        $this->actingAs($user);
+
+        $this->get(route('user.logout'))
+            ->assertRedirect(route('user.login.page'));
+
+        $this->assertEmpty(Auth::user());
+        $this->assertEquals(Auth::user() ,null);
+        $this->assertTrue(Auth::user() == null);
     }
 }
 

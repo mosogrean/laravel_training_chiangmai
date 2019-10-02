@@ -14,13 +14,17 @@
 
 Route::get('/', 'BookController@index')->name('book.index');
 
-Route::get('/create', 'BookController@createIndex')->name('book.create.index');
-Route::post('/create', 'BookController@create')->name('book.create');
 
-Route::get('/edit/{id}', 'BookController@editIndex')->name('book.edit.index');
-Route::post('/edit', 'BookController@edit')->name('book.edit');
+Route::group(['middleware' => ['user']], function (){
+    Route::get('/create', 'BookController@createIndex')->name('book.create.index');
+    Route::post('/create', 'BookController@create')->name('book.create');
 
-Route::get('/delete/{id}', 'BookController@delete')->name('book.delete');
+    Route::get('/edit/{id}', 'BookController@editIndex')->name('book.edit.index');
+    Route::post('/edit', 'BookController@edit')->name('book.edit');
+
+    Route::get('/delete/{id}', 'BookController@delete')->name('book.delete');
+});
+
 
 Route::name('user.')->group(function () {
     Route::get('/register', 'UserController@regisPage')->name('regis.page');

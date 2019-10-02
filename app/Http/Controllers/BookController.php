@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Book;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BookController extends Controller
 {
+
     public function index()
     {
         $books = Book::all();
@@ -18,6 +20,7 @@ class BookController extends Controller
 
     public function createIndex()
     {
+
         return view('book.create');
     }
 

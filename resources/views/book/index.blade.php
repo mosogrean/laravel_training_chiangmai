@@ -52,9 +52,9 @@
                     @if(!empty(\Illuminate\Support\Facades\Auth::user()))
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link login" href="{{ route('user.logout') }}" style="color: white">{{
-                                \Illuminate\Support\Facades\Auth::user()->name
-                                }}</a>
+                                <a class="nav-link login" href="{{ route('user.logout') }}" style="color: white">
+                                    {{ \Illuminate\Support\Facades\Auth::user()->name }}
+                                </a>
                             </li>
                         </ul>
                     @else

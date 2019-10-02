@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Book;
+use App\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -33,8 +34,11 @@ class BookTest extends TestCase
 
     }
 
-    public function testGuestCanAddNewBook()
+    public function testUserCanAddNewBook()
     {
+        $user = factory(User::class)->create();
+        $this->actingAs($user);
+
         $book = factory(Book::class)->make();
 
         $this->get(route('book.create.index'))
@@ -62,11 +66,13 @@ class BookTest extends TestCase
         ]);
     }
 
-    public function testGuestCanEditBook()
+    public function testUserCanEditBook()
     {
         $book = factory(Book::class)->create();
-
         $bookEdit = factory(Book::class)->make();
+        $user = factory(User::class)->create();
+        $this->actingAs($user);
+
 
         $this->get(route('book.edit.index', $book->id))
             ->assertViewIs('book.edit')
@@ -98,9 +104,11 @@ class BookTest extends TestCase
         $this->assertEquals($bookEdit->type, $bookEdited->type);
     }
 
-    public function testGuestCanDeleteBook()
+    public function testUserCanDeleteBook()
     {
         $book = factory(Book::class)->create();
+        $user = factory(User::class)->create();
+        $this->actingAs($user);
 
         $this->get(route('book.delete', $book->id))
             ->assertRedirect(route('book.index'));

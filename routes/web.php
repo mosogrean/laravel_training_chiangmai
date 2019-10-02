@@ -23,6 +23,9 @@ Route::group(['middleware' => ['user']], function (){
     Route::post('/edit', 'BookController@edit')->name('book.edit');
 
     Route::get('/delete/{id}', 'BookController@delete')->name('book.delete');
+
+
+    Route::get('/book', 'BookController@ownBook')->name('book.own.page');
 });
 
 

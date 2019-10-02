@@ -20,7 +20,6 @@ class BookController extends Controller
 
     public function createIndex()
     {
-
         return view('book.create');
     }
 
@@ -33,6 +32,7 @@ class BookController extends Controller
         $book->describe = $request->describe;
         $book->pic = $request->pic;
         $book->type = $request->type;
+        $book->user_id = Auth::user()->id;
 
         if (!$book->save()) {
             return redirect()->route('book.create.index');
@@ -72,6 +72,11 @@ class BookController extends Controller
     }
 
 
+    public function ownBook()
+    {
+        $books = Auth::user()->book;
+        return view('book.own', compact('books'));
+    }
 
 
 }

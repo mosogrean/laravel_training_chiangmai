@@ -21,7 +21,9 @@ class BookTest extends TestCase
 
     public function testGuestCanSeeAllBookExist()
     {
-        $books = factory(Book::class, 5)->create();
+        $books = factory(Book::class, 5)->create([
+            'user_id' => 1,
+        ]);
 
         $response = $this->get(route('book.index'))
             ->assertSuccessful();
@@ -57,6 +59,7 @@ class BookTest extends TestCase
 
         $m_book = new Book();
         $this->assertDatabaseHas($m_book->getTable(), [
+            'user_id' => $user->id,
             'name' => $book->name,
             'author' => $book->author,
             'price' => $book->price,
@@ -68,10 +71,13 @@ class BookTest extends TestCase
 
     public function testUserCanEditBook()
     {
-        $book = factory(Book::class)->create();
-        $bookEdit = factory(Book::class)->make();
         $user = factory(User::class)->create();
         $this->actingAs($user);
+
+        $book = factory(Book::class)->create([
+            'user_id' => $user->id,
+        ]);
+        $bookEdit = factory(Book::class)->make();
 
 
         $this->get(route('book.edit.index', $book->id))
@@ -80,7 +86,6 @@ class BookTest extends TestCase
             ->assertSee($book->author)
             ->assertSee($book->price)
             ->assertSee($book->describe)
-            ->assertSee($book->pic)
             ->assertSee($book->type)
             ->assertStatus(200);
 
@@ -106,15 +111,33 @@ class BookTest extends TestCase
 
     public function testUserCanDeleteBook()
     {
-        $book = factory(Book::class)->create();
         $user = factory(User::class)->create();
         $this->actingAs($user);
+        $book = factory(Book::class)->create([
+            'user_id' => $user->id,
+        ]);
 
         $this->get(route('book.delete', $book->id))
             ->assertRedirect(route('book.index'));
 
         $bookDelete = Book::find($book->id);
         $this->assertEmpty($bookDelete);
+    }
+
+    public function testUserCanSeeOwnBook()
+    {
+        $user = factory(User::class, 2)->create();
+        $this->actingAs($user[0]);
+        $book = factory(Book::class, 3)->create([
+            'user_id' => $user[0]->id,
+        ]);
+
+        $this->get(route('book.own.page'))
+            ->assertViewIs('book.own')
+            ->assertStatus(200)
+            ->assertSee($book[0]->name)
+            ->assertSee($book[1]->name)
+            ->assertSee($book[2]->name);
     }
 }
 

@@ -15,6 +15,12 @@ class Book extends Model
         'describe',
         'pic',
         'type',
+        'user_id',
     ];
+
+    public function user()
+    {
+        return $this->belongsToMany(User::class);
+    }
 
 }

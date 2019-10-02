@@ -39,11 +39,12 @@
                     <input
                         type="email" class="form-control"
                         id="email" aria-describedby="emailHelp" placeholder="Enter Email" name="email"
+                        required
                     >
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                    <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
                 </div>
                 <div class="container">
                     <div class="row">

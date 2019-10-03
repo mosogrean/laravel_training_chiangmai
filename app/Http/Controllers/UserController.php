@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\FaceBook;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Laravel\Socialite\Facades\Socialite;
 
 class UserController extends Controller
 {
@@ -83,6 +85,46 @@ class UserController extends Controller
     {
         Auth::logout();
         return redirect()->route('user.login.page');
+    }
+
+    public function redirectToProvider()
+    {
+        // use Laravel\Socialite\Facades\Socialite;
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    public function handleProviderCallBack()
+    {
+        $facebookUser = Socialite::driver('facebook')
+            ->stateless()
+            ->user();
+
+        $userExist = User::where('email', $facebookUser->email)->get()->first();
+
+        if (empty($userExist)) {
+            $user = new User();
+            $user->name = $facebookUser->name;
+            $user->email = $facebookUser->email;
+
+            $user->org_auth = 'facebook';
+            $user->org_id = $facebookUser->id;
+
+            $user->save();
+
+            $facebook = new FaceBook();
+            $facebook->id = $facebookUser->id;
+            $facebook->token = $facebookUser->token;
+            $facebook->refresh_token = $facebookUser->refreshToken;
+            $facebook->expires_in = $facebookUser->expiresIn;
+            $facebook->avatar_original = $facebookUser->avatar_original;
+            $facebook->created_by = $user->id;
+            $facebook->save();
+
+            Auth::login($user);
+        } else {
+            Auth::login($userExist);
+        }
+        return redirect()->route('book.index');
     }
 
 }

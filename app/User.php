@@ -44,4 +44,9 @@ class User extends Authenticatable
             Book::class, 'user_id', 'id'
         );
     }
+
+    public function facebook()
+    {
+        return $this->hasOne(FaceBook::class, 'created_by', 'id');
+    }
 }

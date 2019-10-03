@@ -24,9 +24,13 @@ Route::group(['middleware' => ['user']], function (){
 
     Route::get('/delete/{id}', 'BookController@delete')->name('book.delete');
 
-
     Route::get('/book', 'BookController@ownBook')->name('book.own.page');
+
+    Route::get('/fb/posts', 'FaceBookController@getPosts')->name('fb.posts');
+    Route::get('/fb/me', 'FaceBookController@me')->name('fb.me');
 });
+
+
 
 
 Route::name('user.')->group(function () {
@@ -37,4 +41,27 @@ Route::name('user.')->group(function () {
     Route::post('/login', 'UserController@login')->name('login');
 
     Route::get('/logout', 'UserController@logout')->name('logout');
+
 });
+
+Route::get('/login/facebook', 'UserController@redirectToProvider')
+    ->name('user.login.facebook');
+
+Route::get('/login/facebook/callback',
+    'UserController@handleProviderCallBack');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

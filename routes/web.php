@@ -14,6 +14,8 @@
 
 Route::get('/', 'BookController@index')->name('book.index');
 
+Route::get('/send', 'OneChatController@sendMessage');
+
 
 Route::group(['middleware' => ['user']], function (){
     Route::get('/create', 'BookController@createIndex')->name('book.create.index');
